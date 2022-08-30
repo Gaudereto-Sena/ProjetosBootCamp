@@ -1,0 +1,185 @@
+header {
+    background-color: #00146C;
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    padding: 0 10%;
+    position: fixed;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    top: 0;
+    font-weight: 400 !important;
+    z-index: 30;
+}
+
+header .box-logo {
+    padding: 1rem;
+}
+
+header .box-logo img {
+    height: 65px;
+}
+
+header .box-logo-responsive {
+    display:none;
+    padding: 0.5rem;
+}
+
+header .box-logo-responsive img{
+    height: 65px;
+}
+
+header .box-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+
+header .nav-bar {
+    display: flex;
+    gap: 1rem;
+    
+}
+
+header .nav-bar>ul {
+    display: flex;
+    gap: 1rem;
+    background-color: #00146C;
+}
+
+header .nav-bar>ul>li>a {
+    padding: 1.05rem;
+    border-radius: 10%;
+    font-size: 1.2rem;
+    float: left;
+    transition: all 0.3s ease;
+}
+
+header .nav-bar>ul>li>a:hover {
+    color: #FFBA62 !important;
+}
+
+header .nav-bar ul li .nav-bar-sub-menu {
+
+}
+
+header .nav-bar ul li .nav-bar-sub-menu ul{
+    height: 0;
+    width: 0;
+    position: absolute;
+    left: 0;
+    top: 97px;
+    padding: 0 10% !important;
+    background-color: #00146C;
+    padding-top: 15px;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* header .nav-bar>ul>li:nth-child(2):hover .nav-bar-sub-menu ul {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    flex-flow: row wrap;
+} */
+
+header .nav-bar>ul>li:nth-child(2) .nav-bar-sub-menu ul {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    flex-flow: row wrap;
+}
+
+header .nav-bar ul li .nav-bar-sub-menu li {
+    width: 33.33%;
+    border-bottom: 1px solid #8391CE;
+    
+}
+
+header .nav-bar ul li .nav-bar-sub-menu li a {
+    padding: 1rem 2rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    fill: #e1e1e1;
+}
+
+
+
+header .nav-bar ul li .nav-bar-sub-menu li a svg {
+    height: 30px;
+    margin: 3px 10px;
+    margin-right: 20px;
+    
+}
+
+header .nav-bar ul .nav-bar-sub-menu li a:hover {
+    background-color: #7287D9;
+    color: #FFBA62 !important;
+    fill: #FFBA62;
+}
+header .config-bar {
+    justify-content: flex-end;
+    font-size: 1rem;
+}
+
+header .config-bar>ul>li{
+    padding-bottom: 0.4rem;
+    position: relative;
+}
+
+header .config-bar>ul>li>svg {
+    height: 45px;
+    stroke: #e1e1e1;
+    fill: #e1e1e1;
+    transition: all 0.3s ease;
+}
+
+header .config-bar>ul>li>svg .svg-background {
+    fill: black;
+}
+
+header .config-bar ul li .config-bar-sub-menu {
+    display: none;
+    background-color: #00146C;
+    position: absolute;
+}
+
+header .config-bar:hover ul li svg {
+    fill: #FAC116;
+}
+
+header .config-bar:hover ul li .config-bar-sub-menu{
+    display: flex;
+    flex-flow: column wrap;
+    top: 46px;
+    right: -50px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+    
+}
+
+header .config-bar .config-bar-sub-menu li{
+
+}
+
+header .config-bar .config-bar-sub-menu li a{
+    padding: 0.7rem;
+    display: block;
+}
+
+
+header .config-bar .config-bar-sub-menu li a:hover{
+background-color: #7287D9;
+color: #FFBA62 !important;
+}
+
+.nav-bar-responsive>a>svg{
+display: none;
+stroke: #e1e1e1;
+height: 45px;
+}

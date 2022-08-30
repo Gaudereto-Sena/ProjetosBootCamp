@@ -1,0 +1,171 @@
+
+/* X-Large */
+@media (max-width: 1399px)
+
+/* and (min-width: 1200px)  */
+  {
+
+  #main-banner .carousel-item {
+    background-size: cover !important;
+}
+
+}
+
+/* Large */
+@media (max-width: 1199px)
+
+/* and (min-width: 992px)  */
+  {
+
+  html {
+    padding-top: 61px !important;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  header .box-nav {
+    justify-content: space-around;
+  }
+
+  header .box-logo {
+    display: none;
+  }
+
+  header .box-logo-responsive {
+    display: block;
+  }
+
+  header .box-logo-responsive img {
+    height: 45px;
+  }
+
+  .nav-bar-responsive {
+    position: relative;
+    padding: 0.5rem;
+  }
+
+  .nav-bar-responsive svg {
+    display: block !important;
+  }
+
+  .nav-bar {
+    display: none !important;
+    position: absolute;
+    top: 59px;
+    left: -59px;
+  }
+
+  header .nav-bar>ul>li {
+    min-width: 185px;
+  }
+
+  header .nav-bar>ul>li>a {
+    width: 100%;
+  }
+
+  header .nav-bar ul li .nav-bar-sub-menu ul {
+    position: static;
+    padding-top: 0;
+    box-shadow: none;
+    padding: 0 !important;
+    background-color: #273471;
+  }
+
+  header .nav-bar ul li .nav-bar-sub-menu ul li {
+    width: 100%;
+  }
+
+  header .nav-bar ul li .nav-bar-sub-menu ul li a {
+    padding: 0.5rem;
+  }
+
+  .nav-bar-responsive a svg:hover {
+    stroke: #FFBA62;
+  }
+
+
+  .nav-bar-responsive:hover .nav-bar {
+    display: flex !important;
+  }
+
+  header .config-bar {
+    padding: 0.5rem;
+  }
+
+  header .config-bar>ul>li {
+    padding: 0;
+  }
+
+  header .nav-bar>ul {
+    gap: 0;
+    flex-flow: column;
+  }
+
+  /* Main */
+
+  #main-banner .bg-mask {
+    background: rgba(0, 0, 0, 0.6) !important;
+  }
+
+  #main-banner .banner-text {
+    height: 100%;
+    padding-right: 0 !important;
+}
+
+
+.carousel-control-next, .carousel-control-prev {
+  width: 8% !important;
+}
+
+}
+
+
+
+/* Medium */
+@media (max-width: 991px)
+
+/* and (min-width: 768px)  */
+{
+  #main-banner .bg-mask {
+    
+  }
+
+}
+
+/* Small */
+@media (max-width: 767px)
+
+/* and (min-width: 576px)  */
+  {
+  header .box-nav {
+    justify-content: space-between;
+  }
+
+  .nav-bar {
+    left: 0;
+  }
+  header .config-bar>ul>li {
+    position: static;
+  }
+
+  header .config-bar:hover ul li .config-bar-sub-menu {
+    right: 0;
+    top: 59px;
+  }
+
+  #main-banner .bg-mask {
+  
+  }
+
+}
+
+/* X-Small */
+@media (max-width: 575px) {
+
+/* and (min-width: 0)  */
+
+}
