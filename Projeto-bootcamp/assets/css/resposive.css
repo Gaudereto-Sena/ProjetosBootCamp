@@ -8,7 +8,20 @@
     background-size: cover !important;
   }
 
+  .main-conteudo .carousel-card-body .card .card-body {
+    max-height: auto !important;
+    height:auto !important;
+  }
 }
+
+/* Breakpoint para suavizar a queda do carousel inferior */
+@media (max-width: 1245px) {
+  .main-conteudo .carousel-card-body .card .card-body {
+    max-height: auto !important;
+    height:auto !important;
+  }
+}
+  
 
 /* Large */
 @media (max-width: 1199px)
@@ -123,7 +136,7 @@
   .main-conteudo .carousel-card-body .card h4 {
     font-size: 1.4rem;
   }
-
+  
 }
 
 
