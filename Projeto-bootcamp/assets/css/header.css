@@ -1,12 +1,12 @@
 header {
-    background-color: #00146C;
+    background-color: #1c213c;
     display: flex;
     flex-flow: row nowrap;
     width: 100%;
     padding: 0 10%;
     position: fixed;
     box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.4);
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
     top: 0;
     font-weight: 400 !important;
     z-index: 30;
@@ -45,7 +45,7 @@ header .nav-bar {
 header .nav-bar>ul {
     display: flex;
     gap: 1rem;
-    background-color: #00146C;
+    background-color: #1c213c;
 }
 
 header .nav-bar>ul>li>a {
@@ -60,9 +60,7 @@ header .nav-bar>ul>li>a:hover {
     color: #FFBA62 !important;
 }
 
-header .nav-bar ul li .nav-bar-sub-menu {
-
-}
+/* Sub menu da nav-bar principal */
 
 header .nav-bar ul li .nav-bar-sub-menu ul{
     height: 0;
@@ -71,7 +69,7 @@ header .nav-bar ul li .nav-bar-sub-menu ul{
     left: 0;
     top: 97px;
     padding: 0 10% !important;
-    background-color: #00146C;
+    background-color: #222a51;
     padding-top: 15px;
     box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.4);
 }
@@ -90,15 +88,16 @@ header .nav-bar>ul>li:nth-child(2) .nav-bar-sub-menu ul {
     display: flex;
     align-items: flex-end;
     flex-flow: row wrap;
+    transition: all 2s ease !important;
 }
 
-header .nav-bar ul li .nav-bar-sub-menu li {
+header .nav-bar ul li .nav-bar-sub-menu ul li {
     width: 33.33%;
     border-bottom: 1px solid #8391CE;
-    
+    transition: all 2s ease !important;
 }
 
-header .nav-bar ul li .nav-bar-sub-menu li a {
+header .nav-bar ul li .nav-bar-sub-menu ul li a {
     padding: 1rem 2rem;
     text-align: center;
     display: flex;
@@ -123,6 +122,10 @@ header .nav-bar ul .nav-bar-sub-menu li a:hover {
     color: #FFBA62 !important;
     fill: #FFBA62;
 }
+
+
+/* Menu do usuario */
+
 header .config-bar {
     justify-content: flex-end;
     font-size: 1rem;
@@ -146,7 +149,7 @@ header .config-bar>ul>li>svg .svg-background {
 
 header .config-bar ul li .config-bar-sub-menu {
     display: none;
-    background-color: #00146C;
+    background-color: #222a51;
     position: absolute;
 }
 
@@ -157,16 +160,11 @@ header .config-bar:hover ul li svg {
 header .config-bar:hover ul li .config-bar-sub-menu{
     display: flex;
     flex-flow: column wrap;
-    top: 46px;
+    top: 50px;
     right: -50px;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
     
 }
-
-header .config-bar .config-bar-sub-menu li{
-
-}
-
 header .config-bar .config-bar-sub-menu li a{
     padding: 0.7rem;
     display: block;

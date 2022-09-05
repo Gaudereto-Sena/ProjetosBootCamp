@@ -1,0 +1,48 @@
+footer .row {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+.footer-info {
+    background: rgb(64, 64, 64);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.7rem 10%;
+
+}
+
+.footer-info .footer-logo img {
+    height: 50px;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+.footer-info .footer-desenvolvedor {
+    align-self: end;
+    text-align: center;
+    font-weight: 500;
+}
+
+.footer-info .footer-links ul {
+    display: flex;
+    gap: 0.3rem;
+    flex-flow: row;
+    justify-content: end;
+}
+
+.footer-links ul li {
+    padding: 1rem;
+    font-size:1.2rem;
+    font-family: "Font Awesome 6 Free" !important;
+}
+
+.footer-links ul li a i{
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+}
+
+.footer-links ul li a i:hover{
+    animation-name: pulsePessoal;
+    animation-duration: 1s;
+    color: #FFBA62 !important;
+}

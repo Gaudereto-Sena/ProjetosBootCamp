@@ -1,12 +1,15 @@
 @import url("/Projeto-bootcamp/assets/css/header.css");
 @import url("/Projeto-bootcamp/assets/css/resposive.css");
+@import url("/Projeto-bootcamp/assets/css/main.css");
+@import url("/Projeto-bootcamp/assets/css/footer.css");
+@import url("/Projeto-bootcamp/assets/css/transition.css");
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     text-decoration: none !important;
-    color: #e1e1e1 !important;
+    color: #cac7c7  !important;
     box-sizing: border-box;
     list-style: none;
     line-height: normal !important;
@@ -17,89 +20,96 @@ html {
     padding-top: 97px;
 }
 
-body {
-    /*    background-color: #ccc; */
-}
-
 ul {
     margin: 0px !important;
     padding: 0px !important;
 }
 
-main {
-    height: 100%;
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
 }
 
-main .banner {}
+/* Animação */
 
-#main-banner {
-    height: 80vh;
-    min-height: 320px;
-    max-height: 720px;
-    z-index: 1;
-    width: 100%;
+@keyframes pulsePessoal {
+    0% {
+        transform: scale3d(1, 1, 1);
+        }
+        25% {
+        transform: scale3d(1.15, 1.15, 1.15);
+        }
+        50% {
+        transform: scale3d(1, 1, 1);
+        }
+        75% {
+        transform: scale3d(1.15, 1.15, 1.15);
+        }
+        100% {
+        transform: scale3d(1, 1, 1);
+        }
 }
 
-#main-banner .carousel-indicators, #main-banner .carousel-control-prev-icon, #main-banner .visually-hidden {
-    z-index: 3;
+/* Modal modificada */
+
+.modal-modificada .modal-content {
+    background-color: #1c213c;;
 }
 
-#main-banner .carousel-item {
-    height: 80vh;
-    min-height: 320px;
-    max-height: 720px;
-    width: 100%;
-    z-index: 1;
-    position: relative;
-    background-size: contain;
+.modal-modificada .modal-content .modal-header {
+    border-color: #8d8caa;
+    text-align: center;
 }
 
-
-#main-banner .bg-banner-1 {
-    background-image: url("../img/estante.jpg");
-    background-repeat: no-repeat;
-
-}
-
-#main-banner .bg-banner-2 {
-    background-image: url("../img/eldritch.jpg");
-    background-repeat: no-repeat;
-
-}
-
-#main-banner .bg-banner-3 {
-    background-image: url("../img/gotBanner.jpg");
-    background-repeat: no-repeat;
-}
-
-#main-banner .bg-mask {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
-    background-size: contain;
-    z-index: 2;
-    position: absolute;
-    height: 100%;
-    max-height: 720px;
-    width: 100%;
-}
-
-#main-banner .banner-text {
-    height: 100%;
-    padding-right: 4rem;
-}
-
-#main-banner .banner-text h1, #main-banner .banner-text h2 {
-   font-size: 3.5rem;
-}
-
-#main-banner .banner-text p {
-    font-size: 1.5rem;
+.modal-modificada .modal-content .modal-header h5 {
     color: #FFBA62 !important;
+    font-weight: 700 !important;
+    text-align: center;
 }
 
-#main-banner .banner-text>.col {
-    z-index: 4;
+.modal-modificada .modal-content .modal-body {
+    display: flex;
+    flex-flow: column;
+    border-color: red;
 }
 
-.carousel-control-next, .carousel-control-prev {
-    width: 3%;
+.modal-modificada .modal-content .modal-body img {
+    width: 100%;
+    margin: 1rem auto;
+    box-shadow: 2px 2px 5px black;
+}
+
+.modal-modificada .modal-content .modal-body p {
+    padding: 1rem 1rem 0;
+    text-align: justify;
+    font-size: 1.1rem;
+}
+
+.modal-modificada .modal-content .modal-footer {
+    border-color: transparent;
+    justify-content: center;
+}
+
+.modal-modificada .modal-content .modal-footer button {
+    background-color:#FFBA62;
+    border-color:#FFBA62;
+    color: rgb(44, 43, 60) !important;
+    padding: 0.5rem 3rem;
+    font-weight: 600;
+}
+
+.modal-modificada .modal-content .modal-footer button:hover {
+    background-color: #FFC985;
+    border-color: #FFC985;
+}
+
+
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }

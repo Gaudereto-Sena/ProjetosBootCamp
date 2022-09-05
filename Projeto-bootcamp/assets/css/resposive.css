@@ -1,4 +1,3 @@
-
 /* X-Large */
 @media (max-width: 1399px)
 
@@ -7,7 +6,7 @@
 
   #main-banner .carousel-item {
     background-size: cover !important;
-}
+  }
 
 }
 
@@ -72,7 +71,7 @@
     padding-top: 0;
     box-shadow: none;
     padding: 0 !important;
-    background-color: #273471;
+    background-color: #222a51;
   }
 
   header .nav-bar ul li .nav-bar-sub-menu ul li {
@@ -86,7 +85,6 @@
   .nav-bar-responsive a svg:hover {
     stroke: #FFBA62;
   }
-
 
   .nav-bar-responsive:hover .nav-bar {
     display: flex !important;
@@ -114,12 +112,17 @@
   #main-banner .banner-text {
     height: 100%;
     padding-right: 0 !important;
-}
+  }
 
 
-.carousel-control-next, .carousel-control-prev {
-  width: 8% !important;
-}
+  #main-banner .carousel-control-next,
+  #main-banner .carousel-control-prev {
+    width: 8% !important;
+  }
+
+  .main-conteudo .carousel-card-body .card h4 {
+    font-size: 1.4rem;
+  }
 
 }
 
@@ -129,11 +132,17 @@
 @media (max-width: 991px)
 
 /* and (min-width: 768px)  */
-{
-  #main-banner .bg-mask {
-    
+  {
+
+
+  .main-conteudo .carousel-card-body .card h4 {
+    font-size: 1.4rem;
   }
 
+  .main-conteudo .carousel-card-body {
+    display: flex;
+    overflow-x: scroll;
+  }
 }
 
 /* Small */
@@ -141,6 +150,9 @@
 
 /* and (min-width: 576px)  */
   {
+
+  /* Navbar */
+
   header .box-nav {
     justify-content: space-between;
   }
@@ -148,6 +160,7 @@
   .nav-bar {
     left: 0;
   }
+
   header .config-bar>ul>li {
     position: static;
   }
@@ -157,15 +170,55 @@
     top: 59px;
   }
 
-  #main-banner .bg-mask {
-  
+  /* Main */
+
+  .main-conteudo {
+    padding: 3em 0rem !important;
   }
 
+  .main-conteudo .main-info {
+    padding: 0 1rem !important;
+    text-align: justify;
+  }
+
+  .main-conteudo h3 {
+    padding: 0 1rem !important;
+    text-align: center;
+  }
+
+  .main-conteudo h2 {
+    text-align: center;
+  }
+
+  .main-conteudo .carousel-euro {
+    padding: 0 1% !important;
+  }
+
+  .main-conteudo .carousel-inner {
+    padding: 0 5% !important;
+  }
+
+  /* Footer */
+
+  .footer-info {
+    padding: 0.7rem 0 !important;
+    flex-flow: column-reverse wrap;
+    text-align: center;
+  }
+
+  .footer-info .footer-links ul {
+    justify-content: center !important;
+  }
 }
+
 
 /* X-Small */
 @media (max-width: 575px) {
 
-/* and (min-width: 0)  */
+  /* and (min-width: 0)  */
+
+  .main-conteudo .carousel-card-body .card .card-body h4 {
+    font-size: 2rem;
+  }
 
 }
