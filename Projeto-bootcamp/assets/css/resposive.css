@@ -153,7 +153,6 @@
   }
 
   .main-conteudo .carousel-card-body {
-    display: flex;
     overflow-x: scroll;
   }
 }
@@ -233,5 +232,7 @@
   .main-conteudo .carousel-card-body .card .card-body h4 {
     font-size: 2rem;
   }
+
+
 
 }
