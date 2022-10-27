@@ -1,0 +1,420 @@
+@media (max-width: 1399px) {
+
+    /* header */
+
+    header .header-container-0 .header-container-0-welcome .header-container-0-welcome-pesquisar {
+        justify-content: start;
+        margin: 14rem 0 0;
+    }
+
+    header .header-container-0 .header-container-0-produto div img {
+        height: 440px;
+        left: -60px;
+    }
+
+    /* main */
+
+    main #todos-jogos-section .container-cards {
+        width: 100%;
+        align-items: center;
+    }
+
+}
+
+@media (max-width: 1199px) {
+
+    .layer-blue {
+        display: none;
+    }
+
+    /* header */
+
+    header .container-header {
+        height: auto;
+        padding: 0 5% 5rem;
+        margin-bottom: 5rem;
+        background-color: var(--cor1);
+    }
+
+    header .container-header .menu-superior .primary-navigation div a:hover,
+    header .container-header .menu-superior .primary-navigation div a:active {
+        color: white;
+    }
+
+    header .container-header .header-container-0 .header-container-0-welcome {
+        height: 50%;
+    }
+
+    header .container-header .header-container-0 .header-container-0-welcome .header-container-0-welcome-pesquisar {
+        justify-content: start;
+        margin: 2rem 0 0;
+    }
+
+    header .container-header .header-container-0 .header-container-0-produto div {
+        display: flex;
+        justify-content: center;
+    }
+
+    header .container-header .header-container-0 .header-container-0-produto div img {
+        height: auto;
+        width: 100%;
+        left: 35px;
+        position: relative;
+        top: 50px;
+    }
+
+    header .container-header .header-container-0 .header-container-0-menu {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+
+    header .container-header .header-container-0 .header-container-0-menu .menu-card {
+        width: 25%
+    }
+
+    header .container-header .header-container-0 .header-container-0-menu .menu-card p {
+        font-size: 1.2rem;
+    }
+
+    /* --- Main --- */
+
+    #presentation-container {
+        height: auto;
+        flex-flow: column nowrap;
+        padding: 0 5%;
+    }
+
+    #presentation-container .presentation-container-text {
+        margin-left: 0;
+    }
+
+    #presentation-container .presentation-container-text h3 {
+        text-align: center;
+    }
+
+    #presentation-container .presentation-container-img {
+        margin-bottom: 3rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container-md-100 {
+        width: 100%;
+    }
+
+    #carrossel-prev {
+        left: 5%;
+    }
+
+    #carrossel-next {
+        right: 5%;
+    }
+
+    main .main-container-1,
+    main .main-container-2 {
+        padding: 0 5%;
+        background-color: var(--cor1);
+    }
+
+    main .main-button-container button {
+        background-color: var(--cor2);
+    }
+
+    main .main-container-1 {
+        padding: 0;
+    }
+
+    main .container-cards {
+        width: 100%;
+        overflow-x: hidden;
+        align-items: center;
+    }
+
+    #cards-mask {
+        background-image: linear-gradient(to bottom, #71c2f44d, #71c2f49c, #71C1F4)
+    }
+
+    #carrossel-jogos {
+        background-color: transparent;
+    }
+}
+
+@media (max-width: 997px) {
+
+    header .container-header {
+        height: auto;
+        background-color: var(--cor1);
+        padding-bottom: 5rem;
+    }
+
+    header .container-header .hamburger {
+        display: inline-block;
+        margin-left: auto;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: rgb(163, 212, 255);
+        border-radius: 0 0 20px 20px;
+        transition: all 200ms linear;
+    }
+
+    header .container-header .hamburger .hamburger-box {
+        width: 30px;
+    }
+
+    header .container-header .hamburger .hamburger-box .hamburger-inner::before,
+    header .container-header .hamburger .hamburger-box .hamburger-inner::after,
+    header .container-header .hamburger .hamburger-box .hamburger-inner {
+        width: 30px;
+        height: 2px;
+    }
+
+    header .container-header .menu-superior .primary-navigation {
+        width: auto;
+        margin: 0;
+
+        position: fixed;
+        top: -212px;
+        right: 0;
+
+        flex-flow: column;
+        background: rgb(163, 212, 255);
+        border-radius: 0 0 0 20px;
+        transition: all 200ms linear;
+    }
+
+    header .container-header .menu-superior .primary-navigation>div {
+        margin: 0;
+        padding: 0.5rem;
+    }
+
+    header .container-header .menu-superior .primary-navigation div a {
+        font-size: 1.1rem;
+    }
+
+    header .menu-superior .primary-navigation div:nth-child(4) {
+        display: none;
+    }
+
+    header .container-header .menu-superior .logo {
+        height: 60px;
+    }
+
+    header .header-container-0 {
+        height: auto;
+    }
+
+    header .container-header .header-container-0 .header-container-0-welcome {
+        height: auto;
+        width: 100%;
+
+        text-align: center;
+    }
+
+    header .container-header .header-container-0 .header-container-0-welcome {
+        margin-top: 0;
+    }
+
+    header .container-header .header-container-0 .header-container-0-welcome .header-container-0-welcome-pesquisar {
+        justify-content: center;
+        margin: 5rem 0 0;
+    }
+
+    header .container-header .header-container-0 .header-container-0-produto {
+        display: none;
+    }
+
+    header .container-header .header-container-0 .header-container-0-menu {
+        width: 90%;
+        margin: 4rem auto 0;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+    header .container-header .header-container-0 .header-container-0-menu .menu-card {
+        width: 35%;
+    }
+
+    .footer-info .footer-logo {
+        width: 8.33333333%;
+    }
+
+    .footer-info .footer-desenvolvedor {
+        width: 66.66%;
+    }
+
+    .footer-info .footer-links {
+        width: 25%;
+    }
+
+
+}
+
+@media (max-width: 767px) {
+    header .container-header .header-container-0 .header-container-0-menu {
+        width: 100%;
+    }
+
+    header .container-header .header-container-0 .header-container-0-menu .menu-card {
+        width: 30%;
+    }
+
+
+    #carrossel-prev {
+        left: 3%;
+    }
+
+    #carrossel-next {
+        right: 3%;
+    }
+
+
+    #todos-jogos-section h2 {
+        padding: 1rem 0;
+    }
+
+    main .main-container-2 .container-cards {
+        height: 50%;
+        margin-top: 1rem;
+    }
+
+    main .main-container-2 .container-cards .card {
+        width: 100%;
+        height: 134px;
+        display: flex;
+    }
+
+    main .main-container-2 .container-cards .card .card-head {
+        height: 100%;
+    }
+
+    main .main-container-2 .container-cards .card .card-head img {
+        width: auto;
+        height: 100%;
+        border-radius: 10px 0 0 10px;
+    }
+
+    main .main-container-2 .container-cards .card .card-body {
+        margin-left: 1rem
+    }
+
+    main .main-container-2 .container-cards .card .card-body h3 {
+        font-size: 1.2rem;
+    }
+
+    main .main-container-2 .container-cards .card .card-body p {
+        font-size: 1rem
+    }
+
+    main .main-container-2 .container-cards .card .card-body div {
+        font-size: 0.8rem
+    }
+
+    main .main-button-container {
+        padding: 1.5rem 0 1rem;
+    }
+
+    #carrossel-jogos {
+        height: 55vh;
+        margin: 3rem 0;
+    }
+
+    .display-sm-none {
+        display: none;
+    }
+
+    .display-sm-inline {
+        display: inline-block;
+    }
+
+    footer .footer-info {
+        flex-flow: column-reverse wrap;
+        text-align: center;
+    }
+
+    .footer-info .footer-logo,
+    .footer-info .footer-desenvolvedor,
+    .footer-info .footer-links {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .footer-info .footer-links ul {
+        justify-content: center;
+    }
+
+    #modal .modal-body .modal-img {      
+        width: auto;
+        height: 10%;
+        padding: 0;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        margin-left: 1rem;
+    }
+
+    #modal .modal-body .modal-info {
+        height: 100%;
+        width: 100%;
+    }
+
+    #modal .modal-footer {
+        padding: 1rem;
+    }
+
+}
+
+@media (max-width: 575px) {
+
+    header .container-header {
+        padding: 0 0 5rem;
+    }
+
+    header .container-header .menu-superior {
+        padding: 1rem;
+    }
+
+    header .container-header .header-container-0 .header-container-0-menu .menu-card svg {
+        width: 65%;
+        max-width: 100px;
+        height: auto;
+    }
+
+    header .container-header .header-container-0 .header-container-0-menu .menu-card p {
+        font-size: 13px
+    }
+
+    header .container-header .header-container-0 .header-container-0-welcome h1 {
+        font-size: 3rem;
+    }
+
+    header .container-header .header-container-0 .header-container-0-welcome .header-container-0-welcome-pesquisar img {
+        left: 10px
+    }
+
+    header .container-header .header-container-0 .header-container-0-welcome .header-container-0-welcome-pesquisar input {
+        width: 100%;
+        left: -10px;
+    }
+
+    main .main-container-2 .container-cards .card .card-head img {
+        height: 52%;
+    }
+
+    .footer-logo {
+        width: 100%;
+    }
+}
+
+@media (max-width: 300px) {
+    * {
+        overflow: hidden;
+    }
+}
+
+@media (max-height: 430px) {
+    #modal #close-modal-btn {
+        top: 5px;
+    }
+}

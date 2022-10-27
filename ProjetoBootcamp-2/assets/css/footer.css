@@ -1,0 +1,78 @@
+footer .footer-info {
+
+    margin-right: 0;
+    margin-left: 0;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.footer-logo {
+    flex: 0 0 auto;
+    width: 25%;
+}
+
+.footer-info {
+    background: var(--cor1);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.7rem 10%;
+
+}
+
+.footer-info .footer-logo {
+    width: 25%;
+}
+
+.footer-info .footer-logo img {
+    height: 50px;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+.footer-info .footer-desenvolvedor {
+    width: 50%;
+    align-self: end;
+    text-align: center;
+    font-weight: 500;
+}
+
+.footer-info .footer-desenvolvedor p {
+    margin-bottom: 1rem;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.footer-info .footer-links {
+    width: 25%;
+}
+
+.footer-info .footer-links ul {
+    display: flex;
+    gap: 0.3rem;
+    flex-flow: row;
+    justify-content: end;
+    list-style: none;
+}
+
+.footer-links ul li {
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-family: "Font Awesome 6 Free" !important;
+    color: white;
+}
+
+.footer-links ul li a i,
+.footer-links ul li a i:visited {
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+    color: white;
+    transition: all 200ms ease;
+}
+
+.footer-links ul li a i:hover {
+    color: var(--cor2);
+}
+
+.display-xl-none {
+    display: none;
+}

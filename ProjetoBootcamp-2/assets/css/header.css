@@ -1,0 +1,256 @@
+.container-header {
+    width: 100%;
+    height: 85vh;
+    margin: 0 0 10rem;
+    padding: 0 10%;
+
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.layer {
+    width: 50%;
+    height: 85vh;
+    position: absolute;
+    top: 0;
+}
+
+.layer-card {
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+}
+
+.layer-white {
+    left: 0;
+}
+
+.layer-blue {
+    background-color: var(--cor1);
+    right: 0;
+}
+
+/* ------------ Menu ------------ */
+.hamburger {
+    display: none;
+}
+
+header {
+    position: relative;
+}
+
+
+header .menu-superior {
+    width: 100%;
+    padding: 1rem 0;
+    margin: 0 auto;
+    display: flex;
+
+    position: relative;
+    z-index: 1000;
+    border-radius: 40px;
+}
+
+header .menu-superior .logo {
+    width: 125.3px;
+    height: 80px;
+}
+
+header .menu-superior .logo img {
+    height: 100%;
+}
+
+header .menu-superior .primary-navigation {
+    width: 100%;
+    margin-left: 2rem;
+    display: flex;
+}
+
+header .menu-superior .primary-navigation>div {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+header .menu-superior .primary-navigation div a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    transition: all 200ms ease;
+}
+
+header .menu-superior .primary-navigation div a:hover, header .menu-superior .primary-navigation div a:active {
+    color: var(--cor2);
+}
+
+header .menu-superior .primary-navigation div .pesquisar-container {
+    display: flex;
+    align-items: center;
+}
+
+header .menu-superior .primary-navigation div .pesquisar-container img {
+    height: 26px;
+    z-index: 2;
+}
+
+header .menu-superior .primary-navigation div .pesquisar-container input {
+    width: 0px;
+    height: 26px;
+    position: relative;
+    left: -15px;
+    border-radius: 10px;
+    z-index: 1;
+    transition: all 200ms ease;
+}
+
+header .menu-superior .primary-navigation div .pesquisar-container:hover input,
+header .menu-superior .primary-navigation div .pesquisar-container input:focus {
+    width: 150px;
+    padding-left: 1rem;
+}
+
+header .menu-superior .primary-navigation div .pesquisar-container input:focus-visible {
+    outline: 1px solid var(--cor2);
+}
+
+header .menu-superior .primary-navigation div:nth-child(4) {
+    margin-left: auto;
+}
+
+
+/* -------------------------------- Conteudo Header -------------------------- */
+
+header .header-container-0 {
+    height: 90vh;
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+}
+
+header .header-container-0-welcome {
+    width: 50%;
+    height: 80%;
+}
+
+header .header-container-0-welcome h1 {
+    font-size: 4rem;
+    margin-top: 2rem;
+}
+
+header .header-container-0-welcome h2 {
+    font-size: 1.5rem;
+}
+
+header .header-container-0-welcome .header-container-0-welcome-pesquisar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 17rem 5rem 0;
+}
+
+header .header-container-0-welcome .header-container-0-welcome-pesquisar img {
+    height: 50px;
+    position: relative;
+    z-index: 2
+}
+
+header .header-container-0-welcome .header-container-0-welcome-pesquisar input {
+    width: 300px;
+    height: 40px;
+
+    padding: 0 2rem;
+    position: relative;
+    left: -28px;
+    z-index: 1;
+
+    border-radius: 30px;
+    font-size: 1.3rem;
+
+}
+
+header .header-container-0-welcome .header-container-0-welcome-pesquisar input:focus {
+    outline: 1px solid var(--cor2);
+}
+
+header .header-container-0-produto {
+    width: 50%;
+    position: relative;
+}
+
+header .header-container-0-produto div img {
+    height: 480px;
+    position: absolute;
+    left: -80px;
+    top: 60px
+}
+
+header .header-container-0-menu {
+    width: 85%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+}
+
+header .header-container-0-menu .menu-card {
+    width: 20%;
+    max-width: 200px;
+    height: 200px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+
+    background-color: white;
+    border: 1px solid var(--cor1);
+    box-shadow: 3px 3px 6px var(--cor1);
+    transition: all 200ms ease;
+}
+
+
+header .header-container-0-menu .menu-card:hover,
+header .header-container-0-menu .menu-card:active {
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+header .header-container-0-menu .menu-card svg {
+    width: 100px;
+    height: 100px;
+    fill: var(--cor1)
+}
+
+header .header-container-0-menu .menu-card p {
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.custom-shape-divider-bottom-1666657022 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1666657022 svg {
+    position: relative;
+    display: block;
+    width: calc(129% + 1.3px);
+    height: 69px;
+}
+
+.custom-shape-divider-bottom-1666657022 .shape-fill {
+    fill: #F0F8FF;
+}
