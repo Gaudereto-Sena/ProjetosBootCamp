@@ -1,7 +1,6 @@
 const menuCardsArray = document.getElementsByClassName("menu-card");
 const mostrarCardsBtn = document.getElementById("mostrar-cards-btn")
 const todosJogosSection = document.getElementById("todos-jogos-section")
-const cardMask = document.getElementById("cards-mask");
 const menuHamburguerBtn = document.getElementById("menu-hamburguer-btn")
 const primaryNavigation = document.getElementById("primary-navigation-id")
 let isMenuOpen = false;
@@ -79,12 +78,12 @@ menuHamburguerBtn.addEventListener("click", function () {
     if (isMenuOpen) {
         menuHamburguerBtn.classList.remove("is-active")
         menuHamburguerBtn.style.top = "0"
-        primaryNavigation.style.top ="-212px"
+        primaryNavigation.style.top = "-212px"
         isMenuOpen = false;
     } else {
         menuHamburguerBtn.classList.add("is-active")
-        menuHamburguerBtn.style.top = "212px"
-        primaryNavigation.style.top ="0px"
+        menuHamburguerBtn.style.top = "205px"
+        primaryNavigation.style.top = "0px"
         isMenuOpen = true;
     }
 })
@@ -109,18 +108,24 @@ window.onload = window.addEventListener("resize", function () {
     timeOutFunctionId = setTimeout(isScreenSetFunction, 500);
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+
+})
+
 mostrarCardsBtn.addEventListener("click", function () {
+    let cardMask = document.getElementById("cards-mask");
     if (isCardshidden) {
         todosJogosSection.style.height = "auto";
         cardMask.style.display = "none";
-        document.querySelector("#todos-jogos-section > .container-cards").style.overflow = "unset";
+        document.querySelector("#todos-jogos-section > #container-cards").style.overflow = "unset";
         mostrarCardsBtn.innerText = "Mostrar menos"
         isCardshidden = false;
     } else {
         isCardshidden = true;
         cardMask.style.display = "block";
         todosJogosSection.style.height = "100vh";
-        document.querySelector("#todos-jogos-section > .container-cards").style.overflow = "hidden";
+        document.querySelector("#todos-jogos-section > #container-cards").style.overflow = "hidden";
         mostrarCardsBtn.innerText = "Mostrar mais"
     }
-})
+});
+

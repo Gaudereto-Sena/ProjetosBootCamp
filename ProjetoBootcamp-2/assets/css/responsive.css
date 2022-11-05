@@ -14,7 +14,7 @@
 
     /* main */
 
-    main #todos-jogos-section .container-cards {
+    main #todos-jogos-section #container-cards {
         width: 100%;
         align-items: center;
     }
@@ -125,7 +125,7 @@
         padding: 0;
     }
 
-    main .container-cards {
+    main #container-cards {
         width: 100%;
         overflow-x: hidden;
         align-items: center;
@@ -274,40 +274,40 @@
         padding: 1rem 0;
     }
 
-    main .main-container-2 .container-cards {
+    main .main-container-2 #container-cards {
         height: 50%;
         margin-top: 1rem;
     }
 
-    main .main-container-2 .container-cards .card {
+    main .main-container-2 #container-cards .card {
         width: 100%;
         height: 134px;
         display: flex;
     }
 
-    main .main-container-2 .container-cards .card .card-head {
+    main .main-container-2 #container-cards .card .card-head {
         height: 100%;
     }
 
-    main .main-container-2 .container-cards .card .card-head img {
+    main .main-container-2 #container-cards .card .card-head img {
         width: auto;
         height: 100%;
         border-radius: 10px 0 0 10px;
     }
 
-    main .main-container-2 .container-cards .card .card-body {
+    main .main-container-2 #container-cards .card .card-body {
         margin-left: 1rem
     }
 
-    main .main-container-2 .container-cards .card .card-body h3 {
+    main .main-container-2 #container-cards .card .card-body h3 {
         font-size: 1.2rem;
     }
 
-    main .main-container-2 .container-cards .card .card-body p {
+    main .main-container-2 #container-cards .card .card-body p {
         font-size: 1rem
     }
 
-    main .main-container-2 .container-cards .card .card-body div {
+    main .main-container-2 #container-cards .card .card-body div {
         font-size: 0.8rem
     }
 
@@ -397,8 +397,11 @@
         width: 100%;
         left: -10px;
     }
-
-    main .main-container-2 .container-cards .card .card-head img {
+    main .main-container-2 #container-cards .card {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    main .main-container-2 #container-cards .card .card-head img {
         height: 52%;
     }
 
@@ -411,10 +414,24 @@
     * {
         overflow: hidden;
     }
+
+    header .container-header .hamburger .hamburger-box,
+    header .container-header .hamburger .hamburger-box .hamburger-inner::before,
+    header .container-header .hamburger .hamburger-box .hamburger-inner::after,
+    header .container-header .hamburger .hamburger-box .hamburger-inner {
+      overflow: unset;
+    }
 }
 
 @media (max-height: 430px) {
     #modal #close-modal-btn {
         top: 5px;
+    }
+
+    #modal .modal-body .modal-info .modal-info-table {
+        height: 30%;
+    }
+    #modal .modal-body .modal-info .modal-info-table .modal-info-item i{
+        padding-bottom: 0.5rem;
     }
 }

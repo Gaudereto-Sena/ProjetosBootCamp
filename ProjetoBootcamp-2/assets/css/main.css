@@ -63,8 +63,8 @@ main h2 {
     z-index: 3;
 }
 
-main .container-cards,
-main .main-container-2 .container-cards {
+main #container-cards,
+main .main-container-2 #container-cards {
     width: 90%;
     height: 80%;
     margin: 0 auto;
@@ -73,7 +73,7 @@ main .main-container-2 .container-cards {
     justify-content: center;
 }
 
-main .container-cards .card {
+main #container-cards .card {
     width: 35%;
     min-width: 280px;
     max-width: 400px;
@@ -87,26 +87,27 @@ main .container-cards .card {
     border-radius: 30px;
 }
 
-main .container-cards .card .card-head img {
+main #container-cards .card .card-head img {
     width: 100%;
     border-radius: 30px 30px 0 0;
 }
 
-main .container-cards .card .card-body {
+main #container-cards .card .card-body {
     padding: 1rem 0 0.5rem;
 }
 
-main .container-cards .card .card-body h3 {
+main #container-cards .card .card-body h3 {
     font-size: 2rem;
     margin-bottom: 0.5rem;
+    white-space: nowrap;
 }
 
 
-main .container-cards .card .card-body p {
+main #container-cards .card .card-body p {
     font-size: 1.2rem;
 }
 
-main .container-cards .card .card-footer button {
+main #container-cards .card .card-footer button {
     width: 150px;
     height: 30px;
 
@@ -123,7 +124,7 @@ main .container-cards .card .card-footer button {
 
 /* ----------------------------- CONTAINER 2 ------------------------------- */
 
-main .main-container-2 .container-cards {
+main .main-container-2 #container-cards {
     flex-flow: row wrap;
     width: 100%;
     height: 75%;
@@ -132,7 +133,7 @@ main .main-container-2 .container-cards {
     position: relative;
 }
 
-main .main-container-2 .container-cards .card {
+main .main-container-2 #container-cards .card {
     width: 350px;
     height: 320px;
     margin-bottom: 2rem;
@@ -141,33 +142,33 @@ main .main-container-2 .container-cards .card {
     border: 1px solid black;
 }
 
-main .main-container-2 .container-cards .card .card-head {
+main .main-container-2 #container-cards .card .card-head {
     position: relative;
 }
 
-main .main-container-2 .container-cards .card .card-head img {
+main .main-container-2 #container-cards .card .card-head img {
     border-radius: 10px 10px 0 0;
 }
 
-main .main-container-2 .container-cards .card .card-body {
+main .main-container-2 #container-cards .card .card-body {
     height: auto;
     text-align: center;
 }
 
-main .main-container-2 .container-cards .card .card-body p {
+main .main-container-2 #container-cards .card .card-body p {
     color: var(--cor2)
 }
 
-main .main-container-2 .container-cards .card .card-body h3 {
+main .main-container-2 #container-cards .card .card-body h3 {
     font-size: 1.5rem;
 }
 
-main .main-container-2 .container-cards .card .card-footer {
+main .main-container-2 #container-cards .card .card-footer {
     text-align: end;
     margin-right: 10px;
 }
 
-main .main-container-2 .container-cards .card .card-footer button {
+main .main-container-2 #container-cards .card .card-footer button {
     position: absolute;
     width: 30px;
     background-color: unset;
@@ -175,7 +176,7 @@ main .main-container-2 .container-cards .card .card-footer button {
     border: 1px solid var(--cor1)
 }
 
-main .main-container-2 .container-cards .card .card-footer button:hover {
+main .main-container-2 #container-cards .card .card-footer button:hover {
     background-color: var(--cor1);
     color: white;
 }

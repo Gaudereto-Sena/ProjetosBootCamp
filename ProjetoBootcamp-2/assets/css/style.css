@@ -1,10 +1,12 @@
 
 @import url("./hamburger.css");
+@import url("./loader.css");
 @import url("./header.css");
 @import url("./main.css");
 @import url("./carrossel.css");
 @import url("./footer.css");
 @import url("./modal.css");
+@import url("./popover.css");
 @import url("./responsive.css");
 
 
@@ -20,5 +22,12 @@
 body {
     background: aliceblue;
     position: relative;
+    overflow-x: hidden;
 }
 
+.menu-card-over {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+}

@@ -224,7 +224,9 @@ header .header-container-0-menu .menu-card:active {
 header .header-container-0-menu .menu-card svg {
     width: 100px;
     height: 100px;
-    fill: var(--cor1)
+    fill: var(--cor1);
+    position: relative;
+    z-index: 1;
 }
 
 header .header-container-0-menu .menu-card p {

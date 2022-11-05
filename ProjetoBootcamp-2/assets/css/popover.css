@@ -1,0 +1,88 @@
+#pop-over-adicionado {}
+
+.popover {
+    width: 200px;
+    height: 50px;
+    display: none;
+    background-color: white;
+    /* border: 1px solid black; */
+    border-radius: 10px 30px 30px 10px;
+    position: absolute;
+    z-index: 3;
+}
+
+.popover::before {
+    content: "";
+    position: absolute;
+
+    right: 97%;
+    margin-left: -5px;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    border: 16px solid #000;
+    border-color: transparent transparent transparent var(--cor2);
+}
+
+#popover-adicionado {
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+#popover-adicionado::before {
+    right: -25px;
+    animation-name: fade-out;
+    animation-duration: 2499ms;
+    animation-delay: 1500ms;
+}
+
+
+.popover-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.popover-content p {
+    font-size: 0.9rem;
+}
+
+#popover-info {
+    height: 25px;
+    background-color: white;
+    color: black;
+    border: 1px solid var(--cor2);
+    border-radius: 10px;
+    margin-left: 0;
+    z-index: 10;
+    
+}
+
+#popover-info::before {
+    left: 50%;
+    bottom: -100%;
+    top: 0;
+    margin-left: -16px;
+    transform: translateY(50%);
+    border-color: var(--cor2) transparent transparent transparent;
+}
+
+#popover-info .popover-content{
+    margin-left: 0;
+    font-size: 1rem;
+}
+
+@keyframes fade-out {
+    0% {
+        border-color: transparent transparent transparent var(--cor2);
+    }
+
+    100% {
+        border-color: transparent
+    }
+}

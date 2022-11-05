@@ -12,16 +12,15 @@ function carrosselFunction() {
     let carrosselContent = "";
 
     let printCarrosselArray = () => {
-
-        console.log(savedCarrosselItemLenght)
         for (i = 0; i < savedCarrosselItemLenght; i++) {
             carrosselContent +=
                 `<div class="carrossel-item" onclick="modal.openModal(${i})">
-                    <img src="./assets/img/${gamesData[i].image}" alt="">
+                    <img src="./assets/img/carrossel/${gamesData[i].image}" alt="">
                 </div>`
         }
 
         carrosselContainer[0].innerHTML = carrosselContent
+
     }
 
     let completeCarrossel = () => {
@@ -31,26 +30,29 @@ function carrosselFunction() {
         for (i = 0; i < itemsOnScreen; i++) {
             carrosselContent +=
                 `<div class="carrossel-item" onclick="modal.openModal(${i})">
-                   <img src="./assets/img/${gamesData[i].image}" alt="">
+                   <img src="./assets/img/carrossel/${gamesData[i].image}" alt="">
                 </div>`
         }
 
         carrosselContainer[0].innerHTML = carrosselContent
+
+    }
+    let printCarrossel = () => {
+        if (isScreenSet == false) {
+            printCarrosselArray()
+            completeCarrossel();
+
+            isScreenSet = true;
+            carrosselItems = document.querySelectorAll(".carrossel-item")
+
+            carrosselItems.forEach(function (item) {
+                item.addEventListener("mouseover", stopCarrossel)
+                item.addEventListener("mouseout", startCarrossel)
+            })
+        }
     }
 
-    if (isScreenSet == false) {
-        printCarrosselArray()
-
-        completeCarrossel()
-
-        isScreenSet = true;
-        carrosselItems = document.querySelectorAll(".carrossel-item")
-
-        carrosselItems.forEach(function (item) {
-            item.addEventListener("mouseover", stopCarrossel)
-            item.addEventListener("mouseout", startCarrossel)
-        })
-    }
+    printCarrossel()
 
     transformation -= 2;
     let transformText = `translateX(${transformation}px)`
