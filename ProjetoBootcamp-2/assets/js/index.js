@@ -79,7 +79,7 @@ menuHamburguerBtn.addEventListener("click", function () {
     if (isMenuOpen) {
         menuHamburguerBtn.classList.remove("is-active")
         menuHamburguerBtn.style.top = "0"
-        primaryNavigation.style.top = "-212px"
+        primaryNavigation.style.top = "-214px"
         isMenuOpen = false;
     } else {
         menuHamburguerBtn.classList.add("is-active")

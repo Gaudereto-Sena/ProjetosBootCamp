@@ -23,7 +23,7 @@ header .menu-superior {
     display: flex;
 
     position: relative;
-    z-index: 5;
+    z-index: 11;
     border-radius: 40px;
 }
 
