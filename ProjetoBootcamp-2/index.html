@@ -11,23 +11,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 
-
-
 <body>
 
     <div class="loader-body">
-        <div class="coffee">
+        <div class="dominoes">
+            <div></div>
+            <div></div>
             <div></div>
             <div></div>
             <div></div>
         </div>
     </div>
-
-
-
-    <div class="layer layer-white" style="display: none"></div>
-    <div class="layer layer-blue" style="display: none"></div>
-
 
     <header>
 
@@ -60,7 +54,7 @@
                         <a href="#todos-jogos-section">Categorias</a>
                     </div>
                     <div>
-                        <a href="#recomendados">Recomendados</a>
+                        <a href="#carrossel-jogos">Recomendados</a>
                     </div>
                     <div>
                         <div class="pesquisar-container">
@@ -69,7 +63,7 @@
                         </div>
                     </div>
                     <div>
-                        <a href="#">Login</a>
+                        <a onclick="openMenuLateral()">Favoritos</a>
                     </div>
 
                 </nav>
@@ -77,15 +71,15 @@
 
             <div id="place-holder">
                 <div>
-                    <img class="place-holder-banner" src="https://via.placeholder.com/500" alt="">
-                    <img class="place-holder-banner" src="https://via.placeholder.com/500" alt="">
+                    <img class="place-holder-banner" src="./assets/img/lazy-load.gif" alt="">
+                    <img class="place-holder-banner" src="./assets/img/lazy-load.gif" alt="">
                 </div>
                 <div>
-                    <img class="place-holder-menu" src="https://via.placeholder.com/200" alt="">
-                    <img class="place-holder-menu" src="https://via.placeholder.com/200" alt="">
-                    <img class="place-holder-menu" src="https://via.placeholder.com/200" alt="">
-                    <img class="place-holder-menu" src="https://via.placeholder.com/200" alt="">
-                    <img class="place-holder-menu" src="https://via.placeholder.com/200" alt="">
+                    <img class="place-holder-menu" src="./assets/img/lazy-load.gif" alt="">
+                    <img class="place-holder-menu" src="./assets/img/lazy-load.gif" alt="">
+                    <img class="place-holder-menu" src="./assets/img/lazy-load.gif" alt="">
+                    <img class="place-holder-menu" src="./assets/img/lazy-load.gif" alt="">
+                    <img class="place-holder-menu" src="./assets/img/lazy-load.gif" alt="">
                 </div>
 
             </div>
@@ -180,7 +174,16 @@
             </div>
         </section>
 
-        <section id="todos-jogos-section" class="main-container-2">
+        <section id="todos-jogos-section" class="main-container">
+            
+            <h2>Todos os jogos</h2>
+            <div id="container-cards">
+                <div id="cards-mask"></div>
+            </div>
+            <span class="main-button-container">
+                <button id="mostrar-cards-btn">Mostrar mais</button>
+            </span>
+
             <div class="custom-shape-divider-top-1666656793">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
                     preserveAspectRatio="none">
@@ -197,13 +200,6 @@
                         class="shape-fill"></path>
                 </svg>
             </div>
-            <h2>Todos os jogos</h2>
-            <div id="container-cards">
-                <div id="cards-mask"></div>
-            </div>
-            <span class="main-button-container">
-                <button id="mostrar-cards-btn">Mostrar mais</button>
-            </span>
         </section>
 
         <section id="carrossel-jogos" class="container-50vh">
@@ -268,6 +264,32 @@
         </div>
     </div>
 
+    <div id="menu-lateral">
+        <div>
+            <i class="fa-regular fa-circle-xmark" onclick="closeMenuLateral()"></i>
+            <h3>Favoritos</h3>
+            <div id="lista-favoritos">
+                <table id="tabela-favorito">
+                    <thead>
+                        <tr>
+                            <th>Jogo</th>
+                            <th>Rating</th>
+                            <th>Preço</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+            <div id="carrossel-favoritos" class="carrossel-slick">
+                <div>
+                    <p>Favoritos vazio</p>
+                </div>
+              
+            </div>
+        </div>
+    </div>
 
     <script src="./assets/js/index.js"></script>
     <script src="./assets/js/modal.js"></script>
@@ -275,10 +297,9 @@
     <script src="./assets/js/carrossel.js"></script>
     <script src="./assets/js/loading.js"></script>
 
-
-
     <script src="./assets/libs/jquery/jquery.min.js"></script>
     <script src="./assets/libs/slick/slick.min.js"></script>
+    <script src="./assets/js/menu-lateral.js"></script>
 </body>
 
 </html>

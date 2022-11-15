@@ -2,15 +2,16 @@ const carrosselContainer = document.getElementsByClassName("carrossel-container"
 const carrosselNextBtn = document.getElementById("carrossel-next");
 const carrosselPrevBtn = document.getElementById("carrossel-prev");
 let carrosselItems;
-let carrosselInterval = setInterval(carrosselFunction, 50);
+let carrosselInterval;
 let transformation = 0
 let timeOutFunctionBtnId;
-
+/* atribui a variavel o numero de itens em gameData */
 const savedCarrosselItemLenght = gamesData.length
 
 function carrosselFunction() {
     let carrosselContent = "";
 
+    /* Função que ira printar o carrossel de acordo com o array gameData */
     let printCarrosselArray = () => {
         for (i = 0; i < savedCarrosselItemLenght; i++) {
             carrosselContent +=
@@ -23,8 +24,10 @@ function carrosselFunction() {
 
     }
 
+    /* Função que completa o carrossel de acordo com o tamanho da tela */
     let completeCarrossel = () => {
         carrosselItems = document.querySelectorAll(".carrossel-item")
+        /* Acha o nume de itens na tela, e usa esse paramêtro para calcular o numero de itens que devem ser repetidos */
         let itemsOnScreen = carrosselContainer[0].offsetWidth / carrosselItems[0].offsetWidth;
         itemsOnScreen = Math.ceil(itemsOnScreen)
         for (i = 0; i < itemsOnScreen; i++) {
@@ -37,14 +40,18 @@ function carrosselFunction() {
         carrosselContainer[0].innerHTML = carrosselContent
 
     }
+
+    /* Função que ira printar o carrossel ao iniciar e quando houver um evento de resize  */
     let printCarrossel = () => {
         if (isScreenSet == false) {
             printCarrosselArray()
             completeCarrossel();
 
             isScreenSet = true;
+            /* Atribui novamente os itens do carrossel a variavel correspondente */
             carrosselItems = document.querySelectorAll(".carrossel-item")
 
+            /* Adiciona os eventos de mouseover e mouseout sobre o carrossel */
             carrosselItems.forEach(function (item) {
                 item.addEventListener("mouseover", stopCarrossel)
                 item.addEventListener("mouseout", startCarrossel)
@@ -54,15 +61,21 @@ function carrosselFunction() {
 
     printCarrossel()
 
+    /* Valor de transformação para fazer o carrossel se mover 2px por execução */
     transformation -= 2;
     let transformText = `translateX(${transformation}px)`
 
+    /* Transforma o objeto HTML em um array */
     carrosselItems = Array.from(carrosselItems)
+
+    /* Calcula o tamanho do carrossel sem os itens adicionados com a função completeCarrossel() */
     let baseCarrosselContainerWidth = savedCarrosselItemLenght * carrosselItems[0].offsetWidth
 
+    /* Faz a movimentação do carrossel para a esquerda */
     for (let item of carrosselItems) {
         item.style.transform = transformText;
     }
+    /* Quando o deslocamento for igual ao tamanho do carrossel, ele voltara para o inicio, dando a sensação que deu uma volta completa */
     if (transformation <= -baseCarrosselContainerWidth) {
         transformation = 0;
         transformText = `translateX(0px)`;

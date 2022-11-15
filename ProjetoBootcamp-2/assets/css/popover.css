@@ -1,5 +1,3 @@
-#pop-over-adicionado {}
-
 .popover {
     width: 200px;
     height: 50px;
@@ -22,7 +20,7 @@
     transform: translateY(-50%);
 
     border: 16px solid #000;
-    border-color: transparent transparent transparent var(--cor2);
+    border-color: transparent transparent transparent var(--cor1);
 }
 
 #popover-adicionado {
@@ -54,7 +52,7 @@
 
 #popover-info {
     height: 25px;
-    background-color: white;
+    background-color: var(--cor2);
     color: black;
     border: 1px solid var(--cor2);
     border-radius: 10px;
@@ -74,12 +72,17 @@
 
 #popover-info .popover-content{
     margin-left: 0;
+    font-size: 0.8rem;
+}
+#popover-info .popover-content p{
     font-size: 1rem;
+    
+    font-weight: 300;
 }
 
 @keyframes fade-out {
     0% {
-        border-color: transparent transparent transparent var(--cor2);
+        border-color: transparent transparent transparent var(--cor1);
     }
 
     100% {

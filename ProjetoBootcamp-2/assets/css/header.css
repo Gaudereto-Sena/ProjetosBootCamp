@@ -1,37 +1,12 @@
 .container-header {
     width: 100%;
     height: 85vh;
-    margin: 0 0 10rem;
+    margin: 0 0 15vh;
     padding: 0 10%;
-
+    background-color: var(--cor1);
     display: flex;
     flex-flow: column nowrap;
 }
-
-.layer {
-    width: 50%;
-    height: 85vh;
-    position: absolute;
-    top: 0;
-}
-
-.layer-card {
-    width: 100%;
-    height: 100%;
-    opacity: 0.2;
-    position: absolute;
-    top: 0;
-}
-
-.layer-white {
-    left: 0;
-}
-
-.layer-blue {
-    background-color: var(--cor1);
-    right: 0;
-}
-
 /* ------------ Menu ------------ */
 .hamburger {
     display: none;
@@ -41,7 +16,6 @@ header {
     position: relative;
 }
 
-
 header .menu-superior {
     width: 100%;
     padding: 1rem 0;
@@ -49,7 +23,7 @@ header .menu-superior {
     display: flex;
 
     position: relative;
-    z-index: 1000;
+    z-index: 5;
     border-radius: 40px;
 }
 
@@ -78,7 +52,7 @@ header .menu-superior .primary-navigation>div {
 
 header .menu-superior .primary-navigation div a {
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 1.2rem;
     padding: 0.5rem;
     transition: all 200ms ease;
@@ -130,6 +104,7 @@ header .header-container-0 {
     display: flex;
     flex-flow: row wrap;
     position: relative;
+    color: white;
 }
 
 header .header-container-0-welcome {
@@ -140,10 +115,13 @@ header .header-container-0-welcome {
 header .header-container-0-welcome h1 {
     font-size: 4rem;
     margin-top: 2rem;
+    font-family: 'Dosis', sans-serif;
+    letter-spacing: 2px;
 }
 
 header .header-container-0-welcome h2 {
     font-size: 1.5rem;
+    font-weight: 300;
 }
 
 header .header-container-0-welcome .header-container-0-welcome-pesquisar {

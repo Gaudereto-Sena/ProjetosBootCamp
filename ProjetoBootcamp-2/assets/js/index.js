@@ -74,6 +74,7 @@ let gamesData = [
     }
 ];
 
+/* Função que abre/fecha menu responsivo */
 menuHamburguerBtn.addEventListener("click", function () {
     if (isMenuOpen) {
         menuHamburguerBtn.classList.remove("is-active")
@@ -89,7 +90,7 @@ menuHamburguerBtn.addEventListener("click", function () {
 })
 
 squareSizeTransform(menuCardsArray);
-
+/* Função que transforma em quadrados o menu de cards */
 function squareSizeTransform(array) {
     for (let card of array) {
         let width = card.offsetWidth;
@@ -98,20 +99,16 @@ function squareSizeTransform(array) {
     }
 }
 
-function isScreenSetFunction() {
-    isScreenSet = false;
-}
+let isScreenSetFunction = () => isScreenSet = false;
 
+/* Quando a alterar o tamanho da tela, executa a função para manter os cards sempre quadrados */
 window.onload = window.addEventListener("resize", function () {
     squareSizeTransform(menuCardsArray);
     clearTimeout(timeOutFunctionId)
     timeOutFunctionId = setTimeout(isScreenSetFunction, 500);
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-
-})
-
+/* Função que abre/fecha seção todos os jogos */
 mostrarCardsBtn.addEventListener("click", function () {
     let cardMask = document.getElementById("cards-mask");
     if (isCardshidden) {
