@@ -8,7 +8,7 @@
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1200;
+    z-index: 9;
     display: none;
 }
 
@@ -138,6 +138,7 @@
     height: 30px;
     background-color: var(--cor2);
     color: black;
+    position: relative;
     border-radius: 10px;
 }
 

@@ -18,12 +18,17 @@ function removePlaceHolders() {
         let placeHolder = document.getElementById("place-holder")
         placeHolder.remove()
 
-        this.document.body.children[1].children[1].children[1].style.display = "flex"
+        this.document.body.children[1].children[0].children[1].style.display = "flex"
         this.document.body.children[2].style.display = "flex"
         this.document.body.children[3].style.display = "flex"
         squareSizeTransform(menuCardsArray);
-        carrosselInterval = setInterval(carrosselFunction, 50);
+        carrosselInterval = setInterval(carrosselFunction, 20);
         
     }, 1000);
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    SetWindow()
+    onScrollevent()
+})
 

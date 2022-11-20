@@ -1,35 +1,36 @@
 let isPopoverActive = false;
 let favoritos = [];
 let menuCards = document.getElementsByClassName("menu-card-over");
+let removeTimeOutId;
 let cards = [
     {
         title: "Game of Thrones",
-        rating: 8.0,
-        image: "gotBanner.jpg",
+        rating: 7.6,
+        imageFav: "gotBanner.jpg",
         price: "R$600,00"
     },
     {
         title: "Eldritch Horror",
-        rating: 8.0,
-        image: "eldritch.jpg",
+        rating: 7.8,
+        imageFav: "eldritch.jpg",
         price: "R$450,00"
     },
     {
         title: "Takeneko",
-        rating: 8.0,
-        image: "takeneko2.jpg",
+        rating: 7.2,
+        imageFav: "takeneko2.jpg",
         price: "R$350,00"
     },
     {
         title: "Brass: Birdgam",
-        rating: 8.0,
-        image: "brassBirdgam.jpg",
+        rating: 8.7,
+        imageFav: "brassBirdgam.jpg",
         price: "R$650,00"
     },
     {
         title: "Gloomhaven",
-        rating: 8.0,
-        image: "gloomhaven.jpg",
+        rating: 8.7,
+        imageFav: "gloomhaven.jpg",
         price: "R$1300,00"
     },
 ]
@@ -51,22 +52,26 @@ class Popover {
     showPopoverAdd(event, idx) { /* Método para mostrar popover que adiciona aos favoritos o jogo selecionado */
         if (isPopoverActive == false) {
             /* Se um popover não estiver ativo, a função inicia */
+            this.removePopover(this.popoverEl);
+            clearTimeout(removeTimeOutId);
             let body = document.body
             let div = document.createElement("div");
             div.className = "popover";
             div.id = "popover-adicionado";
 
+
             if (favoritos.includes(cards[idx]) === false) { /* Texto dinâmico caso o item já estiver adicionado aos favoritos */
                 div.innerHTML =
                     `<div class="popover-content">
-                    <p><b>${cards[idx].title}</b> adicionado aos favoritos</p>
-                </div>`
+                            <p><b>${cards[idx].title}</b> adicionado aos favoritos</p>
+                        </div>`
             } else {
                 div.innerHTML =
                     `<div class="popover-content">
-                    <p><b>${cards[idx].title}</b> já foi adicionado aos favoritos</p>
-                </div>`
+                            <p><b>${cards[idx].title}</b> já foi adicionado aos favoritos</p>
+                        </div>`
             }
+            favoritar(cards[idx]) /* Função que adiciona no favoritos (menu-lateral) */
 
             body.append(div)
 
@@ -74,13 +79,8 @@ class Popover {
             this.popoverEl.style.display = "flex";
             this.popoverEl.style.top = `${event.pageY - 25}px` /* O popover aparecera de acordo com a posição do mouse, onde houve o click */
             this.popoverEl.style.left = `${event.pageX - this.popoverEl.offsetWidth - 20}px`
-            isPopoverActive = true;
-            event.target.disabled = true; /* Desabilita o botão para impossibilitar multiplos clicks */
 
-
-            favoritar(cards[idx]) /* Função que adiciona no favoritos (menu-lateral) */
-
-            this.popoverAutoRemoveAnimation(event, this.popoverEl) /* Executa função que ira remover o popover com uma animação de fade, recebendo o event e o elemento html que foi adicionado (O popover)*/
+            this.popoverAutoRemoveAnimation(this.popoverEl) /* Executa função que ira remover o popover com uma animação de fade, recebendo o event e o elemento html que foi adicionado (O popover)*/
         };
 
     }
@@ -88,12 +88,14 @@ class Popover {
     showPopover(event, name) { /* Método para popovers sobre o menu quadrado na parte superior do site */
         this.popoverEl = document.getElementById(this.popover); /* Caso exista um elemento já de popover já criado para essa função, o mesmo é selecionado para ser removido pela função abaixo */
         this.removePopover(this.popoverEl);
+
         event.target.innerHTML +=
             `<div id="${this.popover}" class="popover">
-                <div class="popover-content">
-                    <p>${name}</p>
-                </div>
-            </div>`;
+                    <div class="popover-content">
+                        <p>${name}</p>
+                    </div>
+                </div>`;
+
         this.popoverEl = document.getElementById(this.popover); /* Seleciona o popover criado para ser printado na tela */
         if (this.popoverEl != null) {
             this.popoverEl.style.display = "flex";
@@ -104,7 +106,7 @@ class Popover {
     }
 
 
-    popoverAutoRemoveAnimation(event, element) {
+    popoverAutoRemoveAnimation(element) {
         /* Animação de fade do popover */
         this.popoverEl.animate({
             background: [window.getComputedStyle(this.popoverEl).backgroundColor, "transparent"],
@@ -115,11 +117,10 @@ class Popover {
 
         /* Após 3s, o botão deixa de estar desabilitado e é permitido adicionar um novo item aos favoritos */
         setTimeout(function () {
-            event.target.disabled = false
             isPopoverActive = false;
         }, 3000);
 
-        setTimeout(this.removePopover, 2949, element); /* Finção que irá remover o popover */
+        removeTimeOutId = setTimeout(this.removePopover, 2949, element); /* Finção que irá remover o popover */
 
     }
 
@@ -137,13 +138,7 @@ class Popover {
             this.popoverEl.remove();
         }
     }
-
-
 }
-
-/* Instânciados dois popovers */
-let popoverAdd = new Popover("popover-adicionado")
-let popoverInfo = new Popover("popover-info")
 
 /* Função que printa as cartas que serão adicionadas na seção todos os jogos */
 function printCards() {
@@ -153,20 +148,14 @@ function printCards() {
     for (eachCard of cards) {
         cardsContainerContent += `<div class="card">
         <div class="card-head">
-            <img src="./assets/img/cards/${eachCard.image}" alt="">
+            <img src="./assets/img/cards/${eachCard.imageFav}" alt="">
         </div>
         <div class="card-body">
             <h3>${eachCard.title}</h3>
 
             <div class="rating">
                 <p>Rating</p>
-                <div>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                    <i class="fa-regular fa-star"></i>
-                </div>
+                ${printRating(eachCard.rating)}
             </div>
 
         </div>
@@ -195,7 +184,23 @@ function addEventsToMenuCards() {
     }
 }
 
+function addEventToRating() {
+    let cardsRating = document.querySelectorAll(".rating > div > div")
+    for (let i = 0; i < cardsRating.length; i++) {
+        cardsRating[i].addEventListener("mouseover", function (event) {
+            event.preventDefault();
+            popoverInfo.showPopover(event, cards[i].rating)
+        });
+        cardsRating[i].addEventListener("mouseout", function () {
+            popoverInfo.removePopoverMenu()
+        })
+    }
+}
 
+/* Instânciados dois popovers */
+let popoverAdd = new Popover("popover-adicionado")
+let popoverInfo = new Popover("popover-info")
 printCards();
-addEventsToMenuCards()
+addEventsToMenuCards();
+addEventToRating();
 

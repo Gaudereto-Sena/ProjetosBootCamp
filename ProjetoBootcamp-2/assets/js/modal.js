@@ -68,7 +68,7 @@ class Modal {
                 <div>PREÇO: ${gamesData[idx].price}</div>
             </div>
             <div>
-                <button id="favorite-modal-btn" onclick="favoritar(${idx})">Adicionar a lista</button>
+                <button id="favorite-modal-btn" onclick="addToFavoritosByModal(${idx})">Adicionar a lista</button>
             </div>
             `
     }
@@ -76,20 +76,20 @@ class Modal {
 
 let modal = new Modal("modal");
 
+let addToFavoritosByModal = (idx) => {
+    isCarrosselFavoritos = true;
+    favoritar(gamesData[idx]);
+}
+
 let animationModal = {
     top: ["-70%", "-35%", "0"],
     height: ["20%", "50%", "95%"],
     background: ["transparent", "var(--cor1)"]
 }
 
-let animationModalChilds = (child) => {return {
+let animationModalChilds = (child) => {
+    return {
         backgroundColor: ['transparent', window.getComputedStyle(child).backgroundColor],
         color: ['transparent', window.getComputedStyle(child).color]
-}}
-
-let ratingIcons =
-    `<i class="fa-solid fa-star"></i>
-    <i class="fa-solid fa-star"></i>
-    <i class="fa-solid fa-star"></i>
-    <i class="fa-solid fa-star-half-stroke"></i>
-    <i class="fa-regular fa-star"></i> `;
+    }
+}

@@ -119,7 +119,7 @@ function carrosselNext() {
 
     timeOutFunctionBtnId = setTimeout(() => {
         carrosselNextBtn.disabled = false;
-        carrosselInterval = setInterval(carrosselFunction, 50);
+        carrosselInterval = setInterval(carrosselFunction, 20);
     }, 305);
 
 
@@ -157,7 +157,7 @@ function carrosselPrev() {
 
     timeOutFunctionBtnId = setTimeout(() => {
         carrosselPrevBtn.disabled = false;
-        carrosselInterval = setInterval(carrosselFunction, 50);
+        carrosselInterval = setInterval(carrosselFunction, 20);
     }, 305);
 }
 
@@ -172,6 +172,6 @@ function stopCarrossel() {
 
 function startCarrossel() {
     timeOutFunctionId = setTimeout(() => {
-        carrosselInterval = setInterval(carrosselFunction, 50)
+        carrosselInterval = setInterval(carrosselFunction, 20)
     }, 500);
 }

@@ -40,12 +40,13 @@ function printFavoritos() {
     listaFavoritos.children[1].innerHTML = ""
     console.log(favoritos)
     if (favoritos.length > 0) {
-        favoritos.forEach(favorito => {
+        favoritos.forEach(function callback(favorito, idx) {
             let tr = document.createElement("tr");
             tr.className = "linha-favorito"
             tr.innerHTML = `<td>${favorito.title}</td>
                         <td>${favorito.rating}</td>
                         <td>${favorito.price}</td>
+                        <td class="delete-favorito"onclick="removeFavoritos(${idx})">x</td>
                         `;
             listaFavoritos.children[1].append(tr);
         });
@@ -55,15 +56,27 @@ function printFavoritos() {
 function favoritar(item) {
 
     if (favoritos.includes(item) === false) {
-       
+
         favoritos.push(item); /* Adiciona aos favoritos o card selecionado */
-        let carrosseSlicklItems = `<div style="background-image: url('./assets/img/cards/${item.image}')"></div>` /* cria uma div para ser inserida no carrossel */
-        $('.carrossel-slick').slick('slickAdd', `${carrosseSlicklItems}`);
-        if (favoritos.length === 1) {
+        if (isCarrosselFavoritos === false) {
+            let carrosseSlicklItems = `<div style="background-image: url('./assets/img/cards/${item.imageFav}')"></div>` /* cria uma div para ser inserida no carrossel */
             $('.carrossel-slick').slick('slickAdd', `${carrosseSlicklItems}`);
-        } else if (favoritos.length === 2) {
-            $('.carrossel-slick').slick('slickRemove', 0);
+            if (favoritos.length === 1) {
+                $('.carrossel-slick').slick('slickAdd', `${carrosseSlicklItems}`);
+            } else if (favoritos.length === 2) {
+                $('.carrossel-slick').slick('slickRemove', 0);
+            }
+        } else {
+            let carrosseSlicklItems = `<div style="background-image: url('./assets/img/carrossel/${item.imageFav}')"></div>` /* cria uma div para ser inserida no carrossel */
+            $('.carrossel-slick').slick('slickAdd', `${carrosseSlicklItems}`);
+            if (favoritos.length === 1) {
+                $('.carrossel-slick').slick('slickAdd', `${carrosseSlicklItems}`);
+            } else if (favoritos.length === 2) {
+                $('.carrossel-slick').slick('slickRemove', 0);
+            }
+            isCarrosselFavoritos = false;
         }
+
         /* Adiciona o item no slickslider do menu lateral */
         printFavoritos() /* Atualiza a tabela de favoritos (função se encontra no menu lateral) */
 
@@ -72,6 +85,23 @@ function favoritar(item) {
             isFavoritoEmpty = false;
         }
     }
+}
+
+function removeFavoritos(idx) {
+    let carrosseSlicklItems = ""
+    favoritos.splice(idx, 1);
+    console.log(favoritos)
+    $('.carrossel-slick').slick('slickRemove', idx);
+    if (favoritos.length === 0) {
+        $('.carrossel-slick').slick('slickRemove', 0);
+        carrosseSlicklItems = `<div><p>Favoritos vazio</p></div>`
+        isFavoritoEmpty = true;
+    } else if (favoritos.length === 1) {
+        carrosseSlicklItems = `<div style="background-image: url('./assets/img/cards/${favoritos[0].image}')"></div>` /* cria uma div para ser inserida no carrossel */
+    }
+    $('.carrossel-slick').slick('slickAdd', `${carrosseSlicklItems}`);
+    printFavoritos()
+
 }
 
 

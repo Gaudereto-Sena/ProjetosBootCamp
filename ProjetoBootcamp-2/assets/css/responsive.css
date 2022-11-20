@@ -146,69 +146,6 @@
         padding-bottom: 5rem;
     }
 
-    header .container-header .hamburger {
-        display: inline-block;
-        margin-left: auto;
-        position: fixed;
-        top: 0;
-        right: 0;
-        background-color: var(--cor2);
-        color: var(--cor1);
-        border-radius: 0 0 20px 20px;
-        transition: all 200ms linear;
-    }
-
-    header .container-header .hamburger .hamburger-box {
-        width: 30px;
-    }
-
-    header .container-header .hamburger .hamburger-box .hamburger-inner::before,
-    header .container-header .hamburger .hamburger-box .hamburger-inner::after,
-    header .container-header .hamburger .hamburger-box .hamburger-inner {
-        width: 30px;
-        height: 2px;
-        background-color: var(--cor1);
-    }
-
-    header .container-header .hamburger:hover .hamburger-box .hamburger-inner::before,
-    header .container-header .hamburger:hover .hamburger-box .hamburger-inner::after,
-    header .container-header .hamburger:hover .hamburger-box .hamburger-inner {
-        background-color: #9D9D9D;
-    }
-
-    header .container-header .menu-superior .primary-navigation {
-        width: auto;
-        margin: 0;
-
-        position: fixed;
-        top: -214px;
-        right: 0;
-
-        flex-flow: column;
-        background-color: var(--cor2);
-        border-radius: 0 0 0 20px;
-        transition: all 200ms linear;
-    }
-
-    header .container-header .menu-superior .primary-navigation>div {
-        margin: 0;
-        padding: 0.5rem;
-    }
-
-    header .container-header .menu-superior .primary-navigation div a {
-        font-size: 1.1rem;
-        color: var(--cor1)
-    }
-    header .container-header .menu-superior .primary-navigation div a:hover, 
-    header .container-header .menu-superior .primary-navigation div a:active {
-        color: #9D9D9D;
-    }
-
-    
-    header .menu-superior .primary-navigation div:nth-child(4) {
-        display: none;
-    }
-
     header .container-header .menu-superior .logo {
         height: 60px;
     }
@@ -259,15 +196,17 @@
     .footer-info .footer-links {
         width: 25%;
     }
+
     #place-holder>div {
         width: 90%;
         flex-wrap: wrap;
-      }
+    }
+
     #place-holder .place-holder-menu {
         max-width: 25vw;
         max-height: 25vw;
         padding: 0.2rem;
-      }
+    }
 
 
 }
@@ -369,7 +308,7 @@
         justify-content: center;
     }
 
-    #modal .modal-body .modal-img {      
+    #modal .modal-body .modal-img {
         width: auto;
         height: 10%;
         padding: 0;
@@ -422,10 +361,12 @@
         width: 100%;
         left: -10px;
     }
+
     main .main-container #container-cards .card {
         margin-left: 0;
         margin-right: 0;
     }
+
     main .main-container #container-cards .card .card-head img {
         height: 52%;
     }
@@ -445,9 +386,23 @@
     #popover-info .popover-content p {
         font-size: 10px;
     }
+
+    #lista-favoritos #tabela-favorito td {
+        font-size: 12px;
+    }
+
+    #modal .modal-header {
+        color: white;
+        font-size: 13px;
+    }
+
+    #modal .modal-body .modal-info p {
+        font-size: 14px;
+    }
+
 }
 
-@media (max-width: 300px) {
+@media (max-width: 350px) {
     * {
         overflow: hidden;
     }
@@ -455,8 +410,21 @@
     header .container-header .hamburger .hamburger-box,
     header .container-header .hamburger .hamburger-box .hamburger-inner::before,
     header .container-header .hamburger .hamburger-box .hamburger-inner::after,
-    header .container-header .hamburger .hamburger-box .hamburger-inner {
-      overflow: unset;
+    header .container-header .hamburger .hamburger-box .hamburger-inner,
+    #carrossel-favoritos .slick-track,
+    #menu-lateral p,
+    #menu-lateral .slick-slide {
+        overflow: unset;
+    }
+
+    html,
+    body {
+        overflow: unset;
+        overflow-x: hidden;
+    }
+
+    #modal .modal-body .modal-info p {
+        font-size: 12px;
     }
 }
 
@@ -468,7 +436,19 @@
     #modal .modal-body .modal-info .modal-info-table {
         height: 30%;
     }
-    #modal .modal-body .modal-info .modal-info-table .modal-info-item i{
+
+    #modal .modal-body .modal-info .modal-info-table .modal-info-item i {
         padding-bottom: 0.5rem;
+    }
+
+    #carrossel-favoritos {
+        height: 75%;
+        margin-bottom: 32px;
+    }
+
+
+    #carrossel-favoritos .slick-track,
+    #carrossel-favoritos .slick-track * {
+        overflow: unset
     }
 }

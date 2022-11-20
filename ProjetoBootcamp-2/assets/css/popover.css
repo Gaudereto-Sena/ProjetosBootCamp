@@ -6,7 +6,7 @@
     /* border: 1px solid black; */
     border-radius: 10px 30px 30px 10px;
     position: absolute;
-    z-index: 3;
+    z-index: 10;
 }
 
 .popover::before {
@@ -79,6 +79,7 @@
     
     font-weight: 300;
 }
+
 
 @keyframes fade-out {
     0% {

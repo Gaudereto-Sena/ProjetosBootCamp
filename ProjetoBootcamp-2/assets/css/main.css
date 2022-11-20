@@ -51,7 +51,6 @@ main .main-container {
     padding: 0 10%;
     display: flex;
     flex-flow: column;
-    justify-content: space-evenly;
     flex-shrink: 0;
     margin-bottom: 0;
     position: relative;
@@ -178,8 +177,21 @@ main .main-button-container button {
     display: flex;
     justify-content: space-around;
     margin-top: 1rem;
+    position: relative;
 }
 
+.rating .rating-stars {
+    position: relative;
+}
+
+.rating .rating-cover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
 #cards-mask {
     width: 100%;
     height: 12%;

@@ -1,6 +1,6 @@
 .container-header {
     width: 100%;
-    height: 85vh;
+    height: auto;
     margin: 0 0 15vh;
     padding: 0 10%;
     background-color: var(--cor1);
@@ -23,7 +23,7 @@ header .menu-superior {
     display: flex;
 
     position: relative;
-    z-index: 11;
+    z-index: 7;
     border-radius: 40px;
 }
 
@@ -100,7 +100,7 @@ header .menu-superior .primary-navigation div:nth-child(4) {
 /* -------------------------------- Conteudo Header -------------------------- */
 
 header .header-container-0 {
-    height: 90vh;
+    height: auto;
     display: flex;
     flex-flow: row wrap;
     position: relative;
@@ -110,6 +110,7 @@ header .header-container-0 {
 header .header-container-0-welcome {
     width: 50%;
     height: 80%;
+    margin-bottom: 80px;
 }
 
 header .header-container-0-welcome h1 {
@@ -158,6 +159,7 @@ header .header-container-0-welcome .header-container-0-welcome-pesquisar input:f
 header .header-container-0-produto {
     width: 50%;
     position: relative;
+    margin-bottom: 80px;
 }
 
 header .header-container-0-produto div img {
@@ -233,4 +235,71 @@ header .header-container-0-menu .menu-card p {
 
 .custom-shape-divider-bottom-1666657022 .shape-fill {
     fill: #F0F8FF;
+}
+
+
+/* ESTILO QUANDO ADICIONADO A CLASSE RESPONSIVE-NAVIGATION */
+
+
+
+header .container-header .hamburger.responsive-navigation {
+    display: inline-block;
+    margin-left: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: var(--cor2);
+    color: var(--cor1);
+    border-radius: 0 0 20px 20px;
+    transition: all 200ms linear;
+}
+
+header .container-header .hamburger.responsive-navigation .hamburger-box {
+    width: 30px;
+}
+
+header .container-header .hamburger.responsive-navigation .hamburger-box .hamburger-inner::before,
+header .container-header .hamburger.responsive-navigation .hamburger-box .hamburger-inner::after,
+header .container-header .hamburger.responsive-navigation .hamburger-box .hamburger-inner {
+    width: 30px;
+    height: 2px;
+    background-color: var(--cor1);
+}
+
+header .container-header .hamburger.responsive-navigation:hover .hamburger-box .hamburger-inner::before,
+header .container-header .hamburger.responsive-navigation:hover .hamburger-box .hamburger-inner::after,
+header .container-header .hamburger.responsive-navigation:hover .hamburger-box .hamburger-inner {
+    background-color: #9D9D9D;
+}
+
+header .container-header .menu-superior .primary-navigation.responsive-navigation {
+    width: auto;
+    margin: 0;
+
+    position: fixed;
+    top: -214px;
+    right: 0;
+
+    flex-flow: column;
+    background-color: var(--cor2);
+    border-radius: 0 0 0 20px;
+    transition: all 200ms linear;
+}
+
+header .container-header .menu-superior .primary-navigation.responsive-navigation>div {
+    margin: 0;
+    padding: 0.5rem;
+}
+
+header .container-header .menu-superior .primary-navigation.responsive-navigation div a {
+    font-size: 1.1rem;
+    color: var(--cor1)
+}
+header .container-header .menu-superior .primary-navigation.responsive-navigation div a:hover, 
+header .container-header .menu-superior .primary-navigation.responsive-navigation div a:active {
+    color: #9D9D9D;
+}
+
+header .menu-superior .primary-navigation.responsive-navigation div:nth-child(4) {
+    display: none;
 }
