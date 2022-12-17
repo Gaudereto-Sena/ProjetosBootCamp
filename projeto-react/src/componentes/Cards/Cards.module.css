@@ -1,0 +1,158 @@
+.container {
+    width: 100%;
+    position: relative;
+}
+
+.container_cards {
+    margin: 0 10%;
+    width: 80%;
+    display: flex;
+
+    overflow: hidden;
+}
+
+.mask_right {
+    position: absolute;
+    width: 30px;
+    height: 100%;
+    right: 10%;
+    background-image: linear-gradient(to right, transparent, black);
+    z-index: 4;
+}
+
+.mask_left {
+    position: absolute;
+    width: 30px;
+    height: 100%;
+    left: 9%;
+    background-image: linear-gradient(to right,black, transparent );
+    z-index: 4;
+}
+
+.card {
+    width: 100%;
+    max-width: 320px;
+    margin: 32px 0;
+    border-radius: 30px;
+    position: relative;
+    z-index: 3;
+    background-color: var(--cor-fundo);
+    transition: all 200ms linear;
+    flex-shrink: 0;
+}
+
+.card img {
+    width: 320px;
+    border-radius: 100%;
+}
+
+.card_info h3,
+.card_info p {
+    width: 100%;
+}
+
+.card_info {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    padding: 0 12px;
+}
+
+.cards_buttons {
+    width: 100%;
+    display: flex;
+    margin-top: 12px;
+    border-radius: 30px;
+    box-shadow: 1px 1px var(--cor-sombra), -1px -1px var(--cor-sombra);
+}
+
+.card_info .cards_buttons button {
+    padding: 8px;
+    margin: 0;
+    margin-left: 12px;
+    padding-left: 0;
+    width: auto;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.card_info .cards_buttons button:hover {
+    background-color: transparent !important;
+    color: var(--cor-botao);
+}
+
+#button_carrinho {
+    margin-left: auto;
+    margin-right: 12px;
+    padding-bottom: 4px;
+
+}
+
+#button_carrinho svg {
+    color: white;
+}
+
+#button_carrinho:hover svg {
+    color: var(--cor-botao);
+}
+
+#button_back,
+#button_forward {
+    width: auto;
+    padding: 8px;
+    color: white;
+    position: absolute;
+    background: transparent;
+    z-index: 4;
+    top: 50%;
+    cursor: pointer
+}
+
+#button_back:hover,
+#button_forward:hover {
+    background-color: transparent !important;
+}
+
+#button_back {
+    left: 7%;
+}
+
+#button_forward {
+    right: 7%;
+}
+@media (max-width: 767px) {
+
+    .container_cards {
+        width: 90%;
+        margin: 0 5%;
+    }
+    .mask_right {
+        right: 5%;
+    }
+    
+    .mask_left {
+        left: 4%;
+    }
+    
+    #button_back {
+        left: 3%;
+    }
+    
+    #button_forward {
+        right: 3%;
+    }
+}
+@media (max-height: 450px) {
+    .card {
+        width: 300px;
+        height: 75vh;
+    }
+
+    #astro_image {
+        height: 160px !important;
+        background-size: contain !important;
+        width: 50% !important;
+    }
+}

@@ -1,0 +1,60 @@
+[
+    {
+      "nome": "Eagle Nebula",
+      "imagem": "/assets/images/eagle-nebula.jpg",
+      "preco": "1MM",
+      "id": "eagleNebula",
+      "tag": "Galáxias",
+      "descricao": "A Nebulosa da Águia (catalogada como Messier 16 ou M16 , e como NGC 6611, e também conhecida como Nebulosa da Rainha das Estrelas ) é um jovem aglomerado aberto de estrelas na constelação de Serpens , descoberto por Jean-Philippe de Cheseaux em 1745."
+    },
+    {
+      "nome": "Helix Nebula",
+      "imagem": "/assets/images/helix-nebula.jpg",
+      "preco": "1MM",
+      "id": "helixNebula",
+      "tag": "Galáxias",
+      "descricao": "Nebulosa de Hélix, também conhecida como Nebulosa da Hélice, A Hélix ou NGC 7293 é uma nebulosa planetária localizada na constelação de Aquarius (ou Aquário). Também foi apelidada de 'Olho de Deus' devido ao seu formato visto da Terra."
+    },
+    {
+      "nome": "Sword of Orion",
+      "imagem": "/assets/images/sword-of-orion.jpg",
+      "preco": "2MM",
+      "id": "swordOfOrion",
+      "tag": "Galáxias",
+      "descricao": "A Espada de Orion é um asterismo compacto na constelação de Orion . Compreende três estrelas ( 42 Orionis , Theta Orionis e Iota Orionis ) e M42, a Nebulosa de Orion , que juntas se parecem com uma espada ou sua bainha . Este grupo está ao sul do proeminente asterismo, o Cinturão de Orion."
+    },
+    {
+      "nome": "Towering Infernus",
+      "imagem": "/assets/images/towering-infernus.jpg",
+      "preco": "2.5MM",
+      "id": "toweringInfernus",
+      "tag": "Galáxias",
+      "descricao": "Lorem ipsum"
+    },
+    {
+      "nome": "Jupiter",
+      "imagem": "/assets/images/jupiter.jpg",
+      "preco": "2.5MM",
+      "id": "jupiter",
+      "tag": "Planetas",
+      "descricao": "Júpiter é o maior planeta do Sistema Solar, tanto em diâmetro quanto em massa, e é o quinto mais próximo do Sol. Possui menos de um milésimo da massa solar, contudo tem 2,5 vezes a massa de todos os outros planetas em conjunto. "
+      
+    },
+    {
+      "nome": "Piao1492",
+      "imagem": "/assets/images/piao1492.jpg",
+      "preco": "2.5MM",
+      "id": "piao1492",
+      "tag": "Planetas",
+      "descricao": "Lorem ipsum"
+    },
+    {
+      "nome": "Sol",
+      "imagem": "/assets/images/sun.jpg",
+      "preco": "125MM",
+      "id": "sol",
+      "tag": "Estrelas",
+      "descricao": "Lorem ipsum"
+    }
+    ]
+  

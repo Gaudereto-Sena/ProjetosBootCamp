@@ -1,0 +1,25 @@
+.carrinho {
+    padding: 150px 10% 100px;
+}
+
+.carrinho h2 {
+    font-size: 48px;
+    margin-bottom: 24px;
+}
+
+@media (max-width: 997px) {
+    .carrinho {
+        padding: 120px 3% 100px;
+    }
+
+    #btn_container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 565px) {
+    .carrinho h2 {
+        text-align: center;
+    }
+}

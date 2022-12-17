@@ -1,0 +1,13 @@
+.catalogo {
+    margin-bottom: 64px;
+}
+
+@media (max-width: 767px) {
+    h1 {
+        padding-top: 120px !important;
+        margin: 0 5% !important;
+        text-align: center;
+        display: block ;
+    }
+}
+

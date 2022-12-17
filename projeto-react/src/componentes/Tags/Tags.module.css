@@ -1,0 +1,29 @@
+.tags {
+    margin-left: 10%
+}
+
+.tags .tags_lista {
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    list-style: none;
+}
+.tags .tags_lista li{
+    padding: 6px 12px;
+    margin: 8px;
+    border-radius: 15px;
+    background-color: var(--cor-detalhes);
+    color: black;
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .tags {
+        margin: 0 5%;
+    }
+
+    .tags .tags_lista {
+        justify-content: center;
+        margin: 0 5%;
+    }
+}

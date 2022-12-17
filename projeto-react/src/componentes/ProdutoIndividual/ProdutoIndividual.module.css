@@ -1,0 +1,61 @@
+.produto {
+    height: 100%;
+    width: 100%;
+    padding: 0 10%;
+}
+
+.texto_container {
+    height: 100%;
+    width: 75%;
+    position: relative;
+    z-index: 2;
+}
+
+.texto_container h2 {
+    padding: 150px 0 16px;
+    font-size: 48px;
+}
+
+.texto_container p {
+    color: white;
+    font-size: 20px;
+}
+
+.imagem_container {
+    height: 100%;
+    width: 70%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.btn_voltar {
+    position: absolute;
+    top: 96px;
+    right: 10%;
+    color: white;
+    font-size: 44px;
+    z-index: 2;
+}
+
+.btn_voltar svg {
+    fill: var(--cor-botao);
+    width: 32px;
+}
+
+@media (max-width: 997px) {
+    .produto {
+        padding: 0 5%;
+    }
+
+    .imagem_container {
+        padding-top: 10%;
+        width: 100%;
+        opacity: 0.8;
+    }
+
+    .texto_container {
+        width: 100%;
+    }
+}

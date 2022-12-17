@@ -1,0 +1,41 @@
+.lista {
+    color: white;
+    list-style: none;
+    width: 100%;
+}
+
+.lista_item {
+    width: 60%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--cor-botao);
+    border-radius: 30px;
+    color: white;
+    padding: 8px 24px;
+    margin-bottom: 16px;
+}
+
+.lista_item svg {
+    fill: red;
+    cursor: pointer;
+}
+
+.item_nome {
+    width: 60%;
+}
+
+.item_preco {
+    width: 40%;
+}
+
+.lista button {
+    border: none;
+    background: transparent;
+}
+
+@media (max-width: 997px) {
+    .lista_item {
+        width: 100%;
+    }
+}
