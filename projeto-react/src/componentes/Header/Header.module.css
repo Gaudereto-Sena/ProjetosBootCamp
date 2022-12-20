@@ -112,6 +112,9 @@ a:hover:before,
 }
 
 @media (max-width: 767px) {
+    .header {
+        padding: 16px 5% 0;
+    }
     .header ul {
         display: none;
     }
@@ -119,5 +122,11 @@ a:hover:before,
     #menu_hamburguer {
         display: flex;
         align-items: center;
+    }
+}
+
+@media (max-width: 565px) {
+    .header {
+        padding: 16px 3% 0;
     }
 }
